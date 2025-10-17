@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV — Restika</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#4f46e5;
+      --muted:#6b7280;
+      --radius:14px;
+      --max-w:900px;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; background:var(--bg); margin:24px; display:flex; justify-content:center}
+    .cv{width:100%; max-width:var(--max-w); background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.95)); border-radius:18px; box-shadow:0 10px 30px rgba(15,23,42,0.08); overflow:hidden; display:grid; grid-template-columns: 320px 1fr}
+    @media (max-width:800px){.cv{grid-template-columns:1fr; padding-bottom:18px}}
+
+    /* SIDEBAR */
+    .side{background:var(--card); padding:28px 22px; border-right:1px solid #eef2ff}
+    .photo{width:100%; display:flex; justify-content:center}
+    .avatar{width:120px;height:120px;border-radius:16px;overflow:hidden;box-shadow:0 6px 18px rgba(79,70,229,0.12);}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{font-size:22px;margin:16px 0 4px}
+    p.title{margin:0;color:var(--muted);font-weight:600}
+    .contact{margin-top:18px;font-size:14px;color:var(--muted)}
+    .contact div{display:flex;gap:8px;align-items:center;padding:8px 0}
+    .skillset{margin-top:18px}
+    .skill{margin:8px 0}
+    .skill .bar{height:8px;background:#eef2ff;border-radius:999px;overflow:hidden}
+    .skill .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#a78bfa);}
+    .languages{margin-top:14px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#f3f4f6;margin:6px 6px 0 0;font-size:13px}
+
+    /* MAIN */
+    .main{padding:28px 34px}
+    .section{margin-bottom:18px}
+    .section h2{font-size:16px;margin:0 0 10px}
+    .job{padding:12px;background:linear-gradient(180deg, rgba(79,70,229,0.03), rgba(79,70,229,0.01));border-radius:10px;margin-bottom:12px}
+    .job h3{margin:0;font-size:15px}
+    .muted{color:var(--muted);font-size:13px}
+    .list{margin:8px 0 0;padding-left:18px}
+
+    /* footer / actions */
+    .actions{display:flex;gap:10px;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;border:0;background:var(--accent);color:#fff;font-weight:600;text-decoration:none}
+    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(79,70,229,0.12)}
+
+    /* print friendly */
+    @media print{
+      body{margin:0;background:white}
+      .cv{box-shadow:none;border-radius:0;grid-template-columns:1fr}
+      .side{border-right:none}
+      .actions{display:none}
+    }
+  </style>
+</head>
+<body>
+  <article class="cv" role="document">
+    <aside class="side">
+      <div class="photo">
+        <div class="avatar">
+          <img src="restika.jpg.jpeg" alt="Foto Restika">
+        </div>
+      </div>
+      <h1>Restika Mahaliany Putri</h1>
+      <p class="title">Mahasiswa</p>
+
+      <div class="contact">
+        <div><strong>📍</strong><span>Tangerang, Indonesia</span></div>
+        <div><strong>✉️</strong><span>restiputri846@gmail.com</span></div>
+        <div><strong>📞</strong><span>+62 87878150812</span></div>
+      </div>
+
+
+        <div class="languages">
+          <h3 style="margin:12px 0 6px">Bahasa</h3>
+          <span class="badge">Bahasa Indonesia (Native)</span>
+          <span class="badge">English (Professional)</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <main class="main">
+      <header style="display:flex;justify-content:space-between;align-items:start">
+        <div>
+          <h2 style="margin:0">Ringkasan Profesional</h2>
+          <p class="muted" style="margin-top:8px;max-width:70%">Terbiasa bekerja dengan tim produk untuk mengubah desain menjadi kode yang dapat dirawat.</p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#print" onclick="window.print();return false">Cetak / PDF</a>
+          <a class="btn ghost" href="#download" id="downloadBtn">Unduh HTML</a>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2>Pengalaman Kerja</h2>
+        <div class="job">
+          <h3>Frontend Developer — PT Contoh Teknologi</h3>
+          <div class="muted">Jan 2023 — Sekarang • Jakarta</div>
+          <ul class="list">
+            <li>Mengembangkan dashboard admin menggunakan React &amp; Tailwind.</li>
+            <li>Mempercepat waktu muat halaman dengan code-splitting dan optimisasi gambar.</li>
+            <li>Bekerja sama dengan designer untuk meningkatkan aksesibilitas (WCAG).</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3>Web Developer — Startup XYZ</h3>
+          <div class="muted">Jun 2020 — Des 2022 • Remote</div>
+          <ul class="list">
+            <li>Membangun landing page konversi tinggi, meningkatkan CVR 18%.</li>
+            <li>Mengimplementasikan component library untuk konsistensi UI.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Pendidikan</h2>
+        <div class="job">
+          <h3>Sarjana Teknik Informatika — Universitas Contoh</h3>
+          <div class="muted">2016 — 2020</div>
+          <ul class="list"><li>IPK: 3.62 • Aktif di klub pengembangan web</li></ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Proyek &amp; Kontribusi</h2>
+        <div class="job">
+          <h3>Design-to-Code Library</h3>
+          <div class="muted">2024</div>
+          <p class="muted" style="margin-top:6px">Membuat library komponen yang mengotomatiskan sebagian alur design-to-code untuk tim produk — tersedia di GitHub.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Sertifikasi</h2>
+        <ul class="list">
+          <li>Certified Frontend Developer — Contoh Institute (2023)</li>
+          <li>Google UX Design Certificate (2022)</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Kata Penutup</h2>
+        <p class="muted">Tertarik bekerja sama? Saya terbuka untuk peluang freelance dan pekerjaan penuh waktu. Terima kasih sudah membaca — silakan hubungi saya untuk portofolio penuh atau referensi.</p>
+      </section>
+
+    </main>
+  </article>
+
+  <script>
+    // tombol unduh HTML sederhana
+    document.getElementById('downloadBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const blob = new Blob([document.documentElement.outerHTML], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'CV-Restika.html'; document.body.appendChild(a); a.click();
+      URL.revokeObjectURL(url); a.remove();
+    });
+  </script>
+</body>
+</html>
